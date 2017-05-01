@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19C18DE169C31469942E96DA /* Pods_Airlines.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37B84465BD2DFFFA9F72414E /* Pods_Airlines.framework */; };
 		E91B4E6A1EB787BB00745D5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B4E691EB787BB00745D5B /* AppDelegate.swift */; };
 		E91B4E6C1EB787BB00745D5B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B4E6B1EB787BB00745D5B /* ViewController.swift */; };
 		E91B4E6F1EB787BB00745D5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E91B4E6D1EB787BB00745D5B /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13E7DA84A8F3E60981C068A0 /* Pods-Airlines.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airlines.release.xcconfig"; path = "Pods/Target Support Files/Pods-Airlines/Pods-Airlines.release.xcconfig"; sourceTree = "<group>"; };
+		37B84465BD2DFFFA9F72414E /* Pods_Airlines.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Airlines.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C802628F66D49652FA5D855 /* Pods-Airlines.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Airlines.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Airlines/Pods-Airlines.debug.xcconfig"; sourceTree = "<group>"; };
 		E91B4E661EB787BA00745D5B /* Airlines.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Airlines.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E91B4E691EB787BB00745D5B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E91B4E6B1EB787BB00745D5B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C18DE169C31469942E96DA /* Pods_Airlines.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +81,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D9DE1D490934F8995B86A66 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				37B84465BD2DFFFA9F72414E /* Pods_Airlines.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AEBE1F3E9C519EAF05B3B5CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C802628F66D49652FA5D855 /* Pods-Airlines.debug.xcconfig */,
+				13E7DA84A8F3E60981C068A0 /* Pods-Airlines.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E91B4E5D1EB787BA00745D5B = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +105,8 @@
 				E91B4E801EB787BB00745D5B /* AirlinesTests */,
 				E91B4E8B1EB787BB00745D5B /* AirlinesUITests */,
 				E91B4E671EB787BA00745D5B /* Products */,
+				AEBE1F3E9C519EAF05B3B5CF /* Pods */,
+				1D9DE1D490934F8995B86A66 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +159,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E91B4E911EB787BB00745D5B /* Build configuration list for PBXNativeTarget "Airlines" */;
 			buildPhases = (
+				CE8BAD2C5CBEEC0004BBEDDB /* [CP] Check Pods Manifest.lock */,
 				E91B4E621EB787BA00745D5B /* Sources */,
 				E91B4E631EB787BA00745D5B /* Frameworks */,
 				E91B4E641EB787BA00745D5B /* Resources */,
+				8094BB652E6BDD0276DA4BCB /* [CP] Embed Pods Frameworks */,
+				5D7288954251EA5F1628BB7C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +283,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5D7288954251EA5F1628BB7C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Airlines/Pods-Airlines-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8094BB652E6BDD0276DA4BCB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Airlines/Pods-Airlines-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE8BAD2C5CBEEC0004BBEDDB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		E91B4E621EB787BA00745D5B /* Sources */ = {
@@ -414,6 +489,7 @@
 		};
 		E91B4E921EB787BB00745D5B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C802628F66D49652FA5D855 /* Pods-Airlines.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Airlines/Info.plist;
@@ -426,6 +502,7 @@
 		};
 		E91B4E931EB787BB00745D5B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 13E7DA84A8F3E60981C068A0 /* Pods-Airlines.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Airlines/Info.plist;
