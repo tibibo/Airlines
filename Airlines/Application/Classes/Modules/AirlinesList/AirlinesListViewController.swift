@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  AirlinesListViewController.swift
 //  Airlines
 //
 //  Created by Vladimir Drapalyuk on 01/05/2017.
@@ -8,18 +8,19 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class AirlinesListViewController: UIViewController {
+    
+    var viewModel:AirlinesListViewModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        guard let _ = viewModel else {
+            fatalError("View model not injected!")
+        }
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
+    
 }
 

@@ -10,7 +10,7 @@ import Swinject
 import SwinjectStoryboard
 import DATAStack
 
-class ServiceAssembly: Assembly {
+class ServicesAssembly: Assembly {
     func assemble(container: Container) {
         
         container.register(NetworkService.self) { r in

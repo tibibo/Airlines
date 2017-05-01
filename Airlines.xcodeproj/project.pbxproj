@@ -12,12 +12,15 @@
 		E91B4E821EB787BB00745D5B /* AirlinesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B4E811EB787BB00745D5B /* AirlinesTests.swift */; };
 		E91B4E8D1EB787BB00745D5B /* AirlinesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E91B4E8C1EB787BB00745D5B /* AirlinesUITests.swift */; };
 		E9AB46B51EB79F3500628B60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46A61EB79F3500628B60 /* AppDelegate.swift */; };
-		E9AB46B61EB79F3500628B60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46A81EB79F3500628B60 /* ViewController.swift */; };
 		E9AB46B71EB79F3500628B60 /* Airlines.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46AE1EB79F3500628B60 /* Airlines.xcdatamodeld */; };
 		E9AB46B81EB79F3500628B60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AB46B11EB79F3500628B60 /* LaunchScreen.storyboard */; };
 		E9AB46B91EB79F3500628B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AB46B31EB79F3500628B60 /* Main.storyboard */; };
 		E9AB46BE1EB7BC7500628B60 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46BD1EB7BC7500628B60 /* ServicesAssembly.swift */; };
 		E9AB46C01EB7BD0600628B60 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46BF1EB7BD0600628B60 /* NetworkService.swift */; };
+		E9AB46C61EB7DD8B00628B60 /* AirlinesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46C51EB7DD8B00628B60 /* AirlinesListViewController.swift */; };
+		E9AB46C81EB7DDA600628B60 /* AirlinesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46C71EB7DDA600628B60 /* AirlinesListViewModel.swift */; };
+		E9AB46CA1EB7DDBA00628B60 /* AirlinesListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46C91EB7DDBA00628B60 /* AirlinesListAssembly.swift */; };
+		E9AB46CC1EB7E0F400628B60 /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46CB1EB7E0F400628B60 /* MainAssembler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,12 +54,15 @@
 		E91B4E8C1EB787BB00745D5B /* AirlinesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AirlinesUITests.swift; sourceTree = "<group>"; };
 		E91B4E8E1EB787BB00745D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E9AB46A61EB79F3500628B60 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E9AB46A81EB79F3500628B60 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E9AB46AF1EB79F3500628B60 /* Airlines.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Airlines.xcdatamodel; sourceTree = "<group>"; };
 		E9AB46B21EB79F3500628B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9AB46B41EB79F3500628B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E9AB46BD1EB7BC7500628B60 /* ServicesAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
 		E9AB46BF1EB7BD0600628B60 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E9AB46C51EB7DD8B00628B60 /* AirlinesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirlinesListViewController.swift; sourceTree = "<group>"; };
+		E9AB46C71EB7DDA600628B60 /* AirlinesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirlinesListViewModel.swift; sourceTree = "<group>"; };
+		E9AB46C91EB7DDBA00628B60 /* AirlinesListAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirlinesListAssembly.swift; sourceTree = "<group>"; };
+		E9AB46CB1EB7E0F400628B60 /* MainAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				E9AB46A61EB79F3500628B60 /* AppDelegate.swift */,
+				E9AB46CB1EB7E0F400628B60 /* MainAssembler.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -184,9 +191,6 @@
 		E9AB46A71EB79F3500628B60 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E9AB46BA1EB7A03000628B60 /* AirlineDetail */,
-				E9AB46BB1EB7A03000628B60 /* AirlinesList */,
-				E9AB46A81EB79F3500628B60 /* ViewController.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -194,6 +198,8 @@
 		E9AB46A91EB79F3500628B60 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E9AB46C21EB7DD5400628B60 /* AirlinesList */,
+				E9AB46C11EB7DD5400628B60 /* AirlineDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -239,20 +245,6 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		E9AB46BA1EB7A03000628B60 /* AirlineDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AirlineDetail;
-			sourceTree = "<group>";
-		};
-		E9AB46BB1EB7A03000628B60 /* AirlinesList */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = AirlinesList;
-			sourceTree = "<group>";
-		};
 		E9AB46BC1EB7BC5900628B60 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -260,6 +252,23 @@
 				E9AB46BD1EB7BC7500628B60 /* ServicesAssembly.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E9AB46C11EB7DD5400628B60 /* AirlineDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AirlineDetail;
+			sourceTree = "<group>";
+		};
+		E9AB46C21EB7DD5400628B60 /* AirlinesList */ = {
+			isa = PBXGroup;
+			children = (
+				E9AB46C51EB7DD8B00628B60 /* AirlinesListViewController.swift */,
+				E9AB46C71EB7DDA600628B60 /* AirlinesListViewModel.swift */,
+				E9AB46C91EB7DDBA00628B60 /* AirlinesListAssembly.swift */,
+			);
+			path = AirlinesList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -447,11 +456,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9AB46CA1EB7DDBA00628B60 /* AirlinesListAssembly.swift in Sources */,
+				E9AB46C61EB7DD8B00628B60 /* AirlinesListViewController.swift in Sources */,
 				E9AB46C01EB7BD0600628B60 /* NetworkService.swift in Sources */,
-				E9AB46B61EB79F3500628B60 /* ViewController.swift in Sources */,
+				E9AB46C81EB7DDA600628B60 /* AirlinesListViewModel.swift in Sources */,
 				E9AB46BE1EB7BC7500628B60 /* ServicesAssembly.swift in Sources */,
 				E9AB46B71EB79F3500628B60 /* Airlines.xcdatamodeld in Sources */,
 				E9AB46B51EB79F3500628B60 /* AppDelegate.swift in Sources */,
+				E9AB46CC1EB7E0F400628B60 /* MainAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
