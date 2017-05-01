@@ -16,6 +16,8 @@
 		E9AB46B71EB79F3500628B60 /* Airlines.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46AE1EB79F3500628B60 /* Airlines.xcdatamodeld */; };
 		E9AB46B81EB79F3500628B60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AB46B11EB79F3500628B60 /* LaunchScreen.storyboard */; };
 		E9AB46B91EB79F3500628B60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E9AB46B31EB79F3500628B60 /* Main.storyboard */; };
+		E9AB46BE1EB7BC7500628B60 /* ServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46BD1EB7BC7500628B60 /* ServicesAssembly.swift */; };
+		E9AB46C01EB7BD0600628B60 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46BF1EB7BD0600628B60 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		E9AB46AF1EB79F3500628B60 /* Airlines.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Airlines.xcdatamodel; sourceTree = "<group>"; };
 		E9AB46B21EB79F3500628B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E9AB46B41EB79F3500628B60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E9AB46BD1EB7BC7500628B60 /* ServicesAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServicesAssembly.swift; sourceTree = "<group>"; };
+		E9AB46BF1EB7BD0600628B60 /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 				E9AB46A51EB79F3500628B60 /* AppDelegate */,
 				E9AB46A71EB79F3500628B60 /* Models */,
 				E9AB46A91EB79F3500628B60 /* Modules */,
+				E9AB46BC1EB7BC5900628B60 /* Services */,
 				E9AB46AA1EB79F3500628B60 /* Support */,
 			);
 			path = Classes;
@@ -179,6 +184,8 @@
 		E9AB46A71EB79F3500628B60 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				E9AB46BA1EB7A03000628B60 /* AirlineDetail */,
+				E9AB46BB1EB7A03000628B60 /* AirlinesList */,
 				E9AB46A81EB79F3500628B60 /* ViewController.swift */,
 			);
 			path = Models;
@@ -230,6 +237,29 @@
 				E9AB46B31EB79F3500628B60 /* Main.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E9AB46BA1EB7A03000628B60 /* AirlineDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AirlineDetail;
+			sourceTree = "<group>";
+		};
+		E9AB46BB1EB7A03000628B60 /* AirlinesList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = AirlinesList;
+			sourceTree = "<group>";
+		};
+		E9AB46BC1EB7BC5900628B60 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E9AB46BF1EB7BD0600628B60 /* NetworkService.swift */,
+				E9AB46BD1EB7BC7500628B60 /* ServicesAssembly.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,7 +447,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9AB46C01EB7BD0600628B60 /* NetworkService.swift in Sources */,
 				E9AB46B61EB79F3500628B60 /* ViewController.swift in Sources */,
+				E9AB46BE1EB7BC7500628B60 /* ServicesAssembly.swift in Sources */,
 				E9AB46B71EB79F3500628B60 /* Airlines.xcdatamodeld in Sources */,
 				E9AB46B51EB79F3500628B60 /* AppDelegate.swift in Sources */,
 			);
