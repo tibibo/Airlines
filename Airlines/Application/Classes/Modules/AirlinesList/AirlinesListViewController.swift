@@ -7,10 +7,15 @@
 //
 
 import UIKit
+import DATASource
 
 class AirlinesListViewController: UIViewController {
     
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     var viewModel:AirlinesListViewModel!
+    
+    var dataSource: DATASource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +24,22 @@ class AirlinesListViewController: UIViewController {
             fatalError("View model not injected!")
         }
         
-        // Do any additional setup after loading the view, typically from a nib.
+        dataSource = DATASource(collectionView: self.collectionView,
+                                    cellIdentifier: "AirlinesListCollectionViewCell",
+                                    fetchRequest: self.viewModel.request,
+                                    mainContext: self.viewModel.dataStack.mainContext,
+                                    configuration: {
+                                        cell, item, indexPath in
+            guard let localCell = cell as? AirlinesListCollectionViewCell else { return }
+            localCell.nameLabel.text = item.value(forKey: "name") as? String
+        })
+
+        collectionView.dataSource = dataSource
+        
+        self.viewModel.networkService.fetchItems{
+            error in
+            print("Finish!!! error = \(error)")
+        }
     }
     
 }

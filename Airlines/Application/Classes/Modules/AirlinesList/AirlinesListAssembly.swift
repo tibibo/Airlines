@@ -8,6 +8,7 @@
 
 import Swinject
 import SwinjectStoryboard
+import DATAStack
 
 class AirlinesListAssembly: Assembly {
     func assemble(container: Container) {
@@ -19,6 +20,7 @@ class AirlinesListAssembly: Assembly {
         container.register(AirlinesListViewModel.self) { _ in AirlinesListViewModel()}
             .initCompleted { (r, c) in
                 c.networkService = r.resolve(NetworkService.self)
+                c.dataStack = r.resolve(DATAStack.self)
                 c.afterInit()
         }
     }

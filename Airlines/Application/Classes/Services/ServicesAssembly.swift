@@ -13,12 +13,13 @@ import DATAStack
 class ServicesAssembly: Assembly {
     func assemble(container: Container) {
         
-        container.register(NetworkService.self) { r in
-            return NetworkService(dataStack: r.resolve(DATAStack.self)!)
-            }.inObjectScope(.container)
+        container.register(NetworkService.self) { _ in NetworkService()}
+            .initCompleted { (r, c) in
+                c.dataStack = r.resolve(DATAStack.self)
+        }.inObjectScope(.container)
         
         container.register(DATAStack.self) { r in
             return DATAStack(modelName: "Airlines")
-            }.inObjectScope(.container)
+        }.inObjectScope(.container)
     }
 }

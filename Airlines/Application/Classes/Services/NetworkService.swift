@@ -11,19 +11,17 @@ import DATAStack
 import Sync
 import Alamofire
 
-class NetworkService: NSObject {
-    let airlinesURL = "https://www.kayak.com/h/mobileapis/directory/airlines"
-    let dataStack: DATAStack
+class NetworkService {
     
-    required init(dataStack: DATAStack) {
-        self.dataStack = dataStack
-    }
+    let airlinesURL = "https://www.kayak.com/h/mobileapis/directory/airlines"
+    
+    var dataStack: DATAStack!
     
     func fetchItems(_ completion: @escaping (NSError?) -> Void) {
         Alamofire.request(airlinesURL).responseJSON { response in
             let data = response.result.value as! [[String : Any]]
             
-            Sync.changes(data, inEntityNamed: "Airlines", dataStack: self.dataStack) { error in
+            Sync.changes(data, inEntityNamed: "Airline", dataStack: self.dataStack) { error in
                 completion(error)
             }
         }
