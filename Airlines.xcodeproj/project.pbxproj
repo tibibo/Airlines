@@ -22,6 +22,7 @@
 		E9AB46CA1EB7DDBA00628B60 /* AirlinesListAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46C91EB7DDBA00628B60 /* AirlinesListAssembly.swift */; };
 		E9AB46CC1EB7E0F400628B60 /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46CB1EB7E0F400628B60 /* MainAssembler.swift */; };
 		E9AB46D01EB7F0FA00628B60 /* AirlinesListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46CF1EB7F0FA00628B60 /* AirlinesListCollectionViewCell.swift */; };
+		E9E77D491EB9303E00E6723A /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E77D481EB9303E00E6723A /* placeholder.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		E9AB46C91EB7DDBA00628B60 /* AirlinesListAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirlinesListAssembly.swift; sourceTree = "<group>"; };
 		E9AB46CB1EB7E0F400628B60 /* MainAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
 		E9AB46CF1EB7F0FA00628B60 /* AirlinesListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirlinesListCollectionViewCell.swift; sourceTree = "<group>"; };
+		E9E77D481EB9303E00E6723A /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -218,6 +220,7 @@
 		E9AB46AC1EB79F3500628B60 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E9E77D481EB9303E00E6723A /* placeholder.png */,
 			);
 			path = Assets;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9AB46B91EB79F3500628B60 /* Main.storyboard in Resources */,
+				E9E77D491EB9303E00E6723A /* placeholder.png in Resources */,
 				E91B4E741EB787BB00745D5B /* Assets.xcassets in Resources */,
 				E9AB46B81EB79F3500628B60 /* LaunchScreen.storyboard in Resources */,
 			);

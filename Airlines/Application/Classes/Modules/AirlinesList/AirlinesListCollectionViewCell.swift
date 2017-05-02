@@ -11,5 +11,6 @@ import UIKit
 class AirlinesListCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var nameLabel:UILabel!
+    @IBOutlet var logoImageView:UIImageView!
     
 }
