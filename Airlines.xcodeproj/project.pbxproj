@@ -23,6 +23,12 @@
 		E9AB46CC1EB7E0F400628B60 /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46CB1EB7E0F400628B60 /* MainAssembler.swift */; };
 		E9AB46D01EB7F0FA00628B60 /* AirlinesListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9AB46CF1EB7F0FA00628B60 /* AirlinesListCollectionViewCell.swift */; };
 		E9E77D491EB9303E00E6723A /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = E9E77D481EB9303E00E6723A /* placeholder.png */; };
+		E9E77D4B1EB93B8300E6723A /* AirlineDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E77D4A1EB93B8300E6723A /* AirlineDetailViewController.swift */; };
+		E9E77D4D1EB93B9100E6723A /* AirlineDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E77D4C1EB93B9100E6723A /* AirlineDetailViewModel.swift */; };
+		E9E77D4F1EB93B9C00E6723A /* AirlineDetailAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E77D4E1EB93B9C00E6723A /* AirlineDetailAssembly.swift */; };
+		E9ED11A31EC27924009FAE23 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED11A21EC27923009FAE23 /* Constants.swift */; };
+		E9ED11A61EC27A52009FAE23 /* CompositeImageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED11A51EC27A52009FAE23 /* CompositeImageFilterExtension.swift */; };
+		E9ED11A81EC3C381009FAE23 /* favoriteStar.png in Resources */ = {isa = PBXBuildFile; fileRef = E9ED11A71EC3C380009FAE23 /* favoriteStar.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +73,12 @@
 		E9AB46CB1EB7E0F400628B60 /* MainAssembler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
 		E9AB46CF1EB7F0FA00628B60 /* AirlinesListCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirlinesListCollectionViewCell.swift; sourceTree = "<group>"; };
 		E9E77D481EB9303E00E6723A /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		E9E77D4A1EB93B8300E6723A /* AirlineDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirlineDetailViewController.swift; sourceTree = "<group>"; };
+		E9E77D4C1EB93B9100E6723A /* AirlineDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirlineDetailViewModel.swift; sourceTree = "<group>"; };
+		E9E77D4E1EB93B9C00E6723A /* AirlineDetailAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AirlineDetailAssembly.swift; sourceTree = "<group>"; };
+		E9ED11A21EC27923009FAE23 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E9ED11A51EC27A52009FAE23 /* CompositeImageFilterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeImageFilterExtension.swift; sourceTree = "<group>"; };
+		E9ED11A71EC3C380009FAE23 /* favoriteStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favoriteStar.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +215,8 @@
 		E9AB46AA1EB79F3500628B60 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				E9ED11A41EC27A2F009FAE23 /* Extensions */,
+				E9ED11A21EC27923009FAE23 /* Constants.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -220,6 +234,7 @@
 		E9AB46AC1EB79F3500628B60 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				E9ED11A71EC3C380009FAE23 /* favoriteStar.png */,
 				E9E77D481EB9303E00E6723A /* placeholder.png */,
 			);
 			path = Assets;
@@ -254,6 +269,9 @@
 		E9AB46C11EB7DD5400628B60 /* AirlineDetail */ = {
 			isa = PBXGroup;
 			children = (
+				E9E77D4A1EB93B8300E6723A /* AirlineDetailViewController.swift */,
+				E9E77D4C1EB93B9100E6723A /* AirlineDetailViewModel.swift */,
+				E9E77D4E1EB93B9C00E6723A /* AirlineDetailAssembly.swift */,
 			);
 			path = AirlineDetail;
 			sourceTree = "<group>";
@@ -267,6 +285,14 @@
 				E9AB46C91EB7DDBA00628B60 /* AirlinesListAssembly.swift */,
 			);
 			path = AirlinesList;
+			sourceTree = "<group>";
+		};
+		E9ED11A41EC27A2F009FAE23 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E9ED11A51EC27A52009FAE23 /* CompositeImageFilterExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,6 +409,7 @@
 				E9E77D491EB9303E00E6723A /* placeholder.png in Resources */,
 				E91B4E741EB787BB00745D5B /* Assets.xcassets in Resources */,
 				E9AB46B81EB79F3500628B60 /* LaunchScreen.storyboard in Resources */,
+				E9ED11A81EC3C381009FAE23 /* favoriteStar.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,11 +484,16 @@
 			files = (
 				E9AB46CA1EB7DDBA00628B60 /* AirlinesListAssembly.swift in Sources */,
 				E9AB46C61EB7DD8B00628B60 /* AirlinesListViewController.swift in Sources */,
+				E9E77D4D1EB93B9100E6723A /* AirlineDetailViewModel.swift in Sources */,
 				E9AB46C01EB7BD0600628B60 /* NetworkService.swift in Sources */,
 				E9AB46C81EB7DDA600628B60 /* AirlinesListViewModel.swift in Sources */,
+				E9ED11A61EC27A52009FAE23 /* CompositeImageFilterExtension.swift in Sources */,
+				E9E77D4B1EB93B8300E6723A /* AirlineDetailViewController.swift in Sources */,
 				E9AB46BE1EB7BC7500628B60 /* ServicesAssembly.swift in Sources */,
+				E9ED11A31EC27924009FAE23 /* Constants.swift in Sources */,
 				E9AB46B71EB79F3500628B60 /* Airlines.xcdatamodeld in Sources */,
 				E9AB46D01EB7F0FA00628B60 /* AirlinesListCollectionViewCell.swift in Sources */,
+				E9E77D4F1EB93B9C00E6723A /* AirlineDetailAssembly.swift in Sources */,
 				E9AB46B51EB79F3500628B60 /* AppDelegate.swift in Sources */,
 				E9AB46CC1EB7E0F400628B60 /* MainAssembler.swift in Sources */,
 			);

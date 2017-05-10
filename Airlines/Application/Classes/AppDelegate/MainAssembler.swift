@@ -20,6 +20,7 @@ class MainAssembler {
         assembler = try! Assembler(assemblies: [
             //Modules
             AirlinesListAssembly(),
+            AirlineDetailAssembly(),
             //Services
             ServicesAssembly()
             ],

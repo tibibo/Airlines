@@ -18,6 +18,8 @@ class AirlinesListViewController: UIViewController {
     
     var dataSource: DATASource!
     
+    private var currentFilter:FilterValueFormat = .All
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,7 +29,7 @@ class AirlinesListViewController: UIViewController {
             fatalError("View model not injected!")
         }
         
-        dataSource = DATASource(collectionView: self.collectionView,
+        dataSource = DATASource(collectionView: self.collectionView!,
                                     cellIdentifier: "AirlinesListCollectionViewCell",
                                     fetchRequest: self.viewModel.request,
                                     mainContext: self.viewModel.dataStack.mainContext,
@@ -36,10 +38,7 @@ class AirlinesListViewController: UIViewController {
             guard let localCell = cell as? AirlinesListCollectionViewCell,
                     let localItem = item as? Airline
                 else { return }
-            localCell.nameLabel.text = localItem.name
-                                        
-            print("localItem.logoURL = \(localItem.logoURL)")
-    
+            localCell.nameLabel.text = localItem.name!
                                         
             let url = URL(string: "https://www.kayak.com" + localItem.logoURL!)!
             let placeholderImage = UIImage(named: "placeholder")!
@@ -53,10 +52,12 @@ class AirlinesListViewController: UIViewController {
                 withURL: url,
                 placeholderImage: placeholderImage,
                 filter: filter
-            )                          
+            )
+                                        
+            localCell.favoriteImageView.isHidden = !(localItem.isFavorite && self.currentFilter == .All)
         })
 
-        collectionView.dataSource = dataSource
+        collectionView!.dataSource = dataSource
         
         self.viewModel.networkService.fetchItems{
             error in
@@ -64,16 +65,42 @@ class AirlinesListViewController: UIViewController {
         }
     }
     
-}
-
-
-public struct AspectScaledToFitSizeWithRoundedCornersFilter: CompositeImageFilter {
-    public init(size: CGSize, radius: CGFloat, divideRadiusByImageScale: Bool = false) {
-        self.filters = [
-            AspectScaledToFitSizeFilter(size: size),
-            RoundedCornersFilter(radius: radius, divideRadiusByImageScale: divideRadiusByImageScale)
-        ]
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        if segue.identifier == Constant.Segue.showDetailViewController {
+            
+            guard let selected = collectionView?.indexPathsForSelectedItems?.first,
+                let airline = dataSource.object(selected) as? Airline else {
+                fatalError("No airline available")
+            }
+            
+            guard let detailVC = segue.destination as? AirlineDetailViewController else {
+                fatalError("Wrong destination view controller, waiting AirlineDetailViewController")
+            }
+            
+            detailVC.viewModel.airline = airline
+        }
     }
     
-    public let filters: [ImageFilter]
+    @IBAction func applyFilter(segmentedControl: UISegmentedControl) {
+    
+        guard let filterValue = FilterValueFormat(rawValue: segmentedControl.selectedSegmentIndex) else {
+            return
+        }
+        
+        switch filterValue {
+        case .All :
+            self.currentFilter = .All
+            self.dataSource.predicate = nil
+        case .Favorite :
+            self.currentFilter = .Favorite
+            self.dataSource.predicate = NSPredicate(format: "isFavorite == true")
+        }
+    }
+    
+    private enum FilterValueFormat:Int {
+        case All
+        case Favorite
+    }
 }
+
