@@ -47,7 +47,7 @@ class AirlineDetailViewController: UIViewController {
         siteButton.setTitle(airline.site, for: .normal)
         
         
-        let url = URL(string: "https://www.kayak.com" + airline.logoURL!)!
+        let url = URL(string: Config.Backend.MainURL + airline.logoURL!)!
         let placeholderImage = UIImage(named: "placeholder")!
         
         let filter = AspectScaledToFitSizeWithRoundedCornersFilter(

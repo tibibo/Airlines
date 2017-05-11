@@ -34,12 +34,12 @@ class AirlinesListViewController: UIViewController {
         dataSource = DATASource(collectionView: self.collectionView!,
                                     cellIdentifier: key,
                                     fetchRequest: self.viewModel.request,
-                                    mainContext: self.viewModel.dataStack.mainContext,
+                                    mainContext: self.viewModel.mainContext,
                                     configuration: collectionViewConfiguration)
 
         collectionView!.dataSource = dataSource
         
-        self.viewModel.networkService.fetchItems{
+        self.viewModel.refreshAirlines {
             error in
             print("Finish!!! error = \(error)")
         }
@@ -48,8 +48,10 @@ class AirlinesListViewController: UIViewController {
     private func collectionViewConfiguration(_ cell: UICollectionViewCell, _ item: NSManagedObject, _ indexPath: IndexPath) -> () {
         
         guard let localCell = cell as? AirlinesListCollectionViewCell,
-            let localItem = item as? Airline
-            else { return }
+            let localItem = item as? Airline else {
+                return
+        }
+        
         localCell.nameLabel.text = localItem.name!
         
         let url = URL(string: Config.Backend.MainURL + localItem.logoURL!)!

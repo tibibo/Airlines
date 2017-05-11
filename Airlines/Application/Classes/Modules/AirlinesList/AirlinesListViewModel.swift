@@ -28,4 +28,12 @@ class AirlinesListViewModel {
         return request
     }()
     
+    public func refreshAirlines(_ completion: @escaping (NSError?) -> Void) {
+        self.networkService.fetchItems(completion)
+    }
+    
+    public var mainContext:NSManagedObjectContext {
+        return dataStack.mainContext
+    }
+    
 }
