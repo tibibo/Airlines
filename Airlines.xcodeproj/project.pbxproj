@@ -29,6 +29,7 @@
 		E9ED11A31EC27924009FAE23 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED11A21EC27923009FAE23 /* Constants.swift */; };
 		E9ED11A61EC27A52009FAE23 /* CompositeImageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED11A51EC27A52009FAE23 /* CompositeImageFilterExtension.swift */; };
 		E9ED11A81EC3C381009FAE23 /* favoriteStar.png in Resources */ = {isa = PBXBuildFile; fileRef = E9ED11A71EC3C380009FAE23 /* favoriteStar.png */; };
+		E9ED11AA1EC427B1009FAE23 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9ED11A91EC427B1009FAE23 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		E9ED11A21EC27923009FAE23 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E9ED11A51EC27A52009FAE23 /* CompositeImageFilterExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompositeImageFilterExtension.swift; sourceTree = "<group>"; };
 		E9ED11A71EC3C380009FAE23 /* favoriteStar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favoriteStar.png; sourceTree = "<group>"; };
+		E9ED11A91EC427B1009FAE23 /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +219,7 @@
 			children = (
 				E9ED11A41EC27A2F009FAE23 /* Extensions */,
 				E9ED11A21EC27923009FAE23 /* Constants.swift */,
+				E9ED11A91EC427B1009FAE23 /* Config.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -484,6 +487,7 @@
 			files = (
 				E9AB46CA1EB7DDBA00628B60 /* AirlinesListAssembly.swift in Sources */,
 				E9AB46C61EB7DD8B00628B60 /* AirlinesListViewController.swift in Sources */,
+				E9ED11AA1EC427B1009FAE23 /* Config.swift in Sources */,
 				E9E77D4D1EB93B9100E6723A /* AirlineDetailViewModel.swift in Sources */,
 				E9AB46C01EB7BD0600628B60 /* NetworkService.swift in Sources */,
 				E9AB46C81EB7DDA600628B60 /* AirlinesListViewModel.swift in Sources */,

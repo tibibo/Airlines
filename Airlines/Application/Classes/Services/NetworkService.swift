@@ -13,15 +13,22 @@ import Alamofire
 
 class NetworkService {
     
-    let airlinesURL = "https://www.kayak.com/h/mobileapis/directory/airlines"
-    
     var dataStack: DATAStack!
     
     func fetchItems(_ completion: @escaping (NSError?) -> Void) {
-        Alamofire.request(airlinesURL).responseJSON { response in
-            let data = response.result.value as! [[String : Any]]
+        Alamofire.request(Config.Backend.AirlinesURL).responseJSON { response in
             
-            Sync.changes(data, inEntityNamed: "Airline", dataStack: self.dataStack) { error in
+            if case .failure(let error) = response.result {
+                print("Can't connect to backend error = \(error)")
+                return
+            }
+            
+            guard let data = response.result.value as? [[String : Any]] else {
+                print("Can't read data from the backend response.result.value = \(response.result.value)")
+                return
+            }
+            
+            Sync.changes(data, inEntityNamed: Constant.Entity.Airline, dataStack: self.dataStack) { error in
                 completion(error)
             }
         }

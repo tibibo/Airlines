@@ -23,7 +23,7 @@ class AirlinesListViewModel {
     }
     
     lazy var request: NSFetchRequest<NSFetchRequestResult> = {
-        let request: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Airline")
+        let request: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: Constant.Entity.Airline)
         request.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
         return request
     }()

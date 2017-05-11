@@ -11,5 +11,8 @@ public struct Constant {
     public struct Segue {
         public static let showDetailViewController = "ShowDetailViewController"
     }
-    
+ 
+    public struct Entity {
+        public static let Airline = "Airline"
+    }
 }
