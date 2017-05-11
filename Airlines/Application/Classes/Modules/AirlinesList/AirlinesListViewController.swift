@@ -29,33 +29,13 @@ class AirlinesListViewController: UIViewController {
             fatalError("View model not injected!")
         }
         
+        let key = String(describing: AirlinesListCollectionViewCell.self)
+        
         dataSource = DATASource(collectionView: self.collectionView!,
-                                    cellIdentifier: "AirlinesListCollectionViewCell",
+                                    cellIdentifier: key,
                                     fetchRequest: self.viewModel.request,
                                     mainContext: self.viewModel.dataStack.mainContext,
-                                    configuration: {
-            cell, item, indexPath in
-            guard let localCell = cell as? AirlinesListCollectionViewCell,
-                    let localItem = item as? Airline
-                else { return }
-            localCell.nameLabel.text = localItem.name!
-                                        
-            let url = URL(string: "https://www.kayak.com" + localItem.logoURL!)!
-            let placeholderImage = UIImage(named: "placeholder")!
-                                        
-            let filter = AspectScaledToFitSizeWithRoundedCornersFilter(
-                size: localCell.logoImageView.frame.size,
-                radius: 5.0
-            )
-                                        
-            localCell.logoImageView.af_setImage(
-                withURL: url,
-                placeholderImage: placeholderImage,
-                filter: filter
-            )
-                                        
-            localCell.favoriteImageView.isHidden = !(localItem.isFavorite && self.currentFilter == .All)
-        })
+                                    configuration: collectionViewConfiguration)
 
         collectionView!.dataSource = dataSource
         
@@ -63,6 +43,30 @@ class AirlinesListViewController: UIViewController {
             error in
             print("Finish!!! error = \(error)")
         }
+    }
+    
+    private func collectionViewConfiguration(_ cell: UICollectionViewCell, _ item: NSManagedObject, _ indexPath: IndexPath) -> () {
+        
+        guard let localCell = cell as? AirlinesListCollectionViewCell,
+            let localItem = item as? Airline
+            else { return }
+        localCell.nameLabel.text = localItem.name!
+        
+        let url = URL(string: Config.Backend.MainURL + localItem.logoURL!)!
+        let placeholderImage = UIImage(named: "placeholder")!
+        
+        let filter = AspectScaledToFitSizeWithRoundedCornersFilter(
+            size: localCell.logoImageView.frame.size,
+            radius: 5.0
+        )
+        
+        localCell.logoImageView.af_setImage(
+            withURL: url,
+            placeholderImage: placeholderImage,
+            filter: filter
+        )
+        
+        localCell.favoriteImageView.isHidden = !(localItem.isFavorite && self.currentFilter == .All)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

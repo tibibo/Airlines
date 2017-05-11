@@ -9,7 +9,8 @@
 public struct Config {
     
     public struct Backend {
-        public static let AirlinesURL = "https://www.kayak.com/h/mobileapis/directory/airlines"
+        public static let MainURL = "https://www.kayak.com"
+        public static let AirlinesURL = MainURL + "/h/mobileapis/directory/airlines"
     }
 
 }
