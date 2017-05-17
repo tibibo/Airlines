@@ -18,7 +18,7 @@ class AirlinesListViewController: UIViewController {
     
     var dataSource: DATASource!
     
-    private var currentFilter:FilterValueFormat = .All
+    fileprivate var currentFilter:FilterValueFormat = .all
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,7 +45,7 @@ class AirlinesListViewController: UIViewController {
         }
     }
     
-    private func collectionViewConfiguration(_ cell: UICollectionViewCell, _ item: NSManagedObject, _ indexPath: IndexPath) -> () {
+    fileprivate func collectionViewConfiguration(_ cell: UICollectionViewCell, _ item: NSManagedObject, _ indexPath: IndexPath) -> () {
         
         guard let localCell = cell as? AirlinesListCollectionViewCell,
             let localItem = item as? Airline else {
@@ -68,7 +68,7 @@ class AirlinesListViewController: UIViewController {
             filter: filter
         )
         
-        localCell.favoriteImageView.isHidden = !(localItem.isFavorite && self.currentFilter == .All)
+        localCell.favoriteImageView.isHidden = !(localItem.isFavorite && self.currentFilter == .all)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -88,25 +88,25 @@ class AirlinesListViewController: UIViewController {
         }
     }
     
-    @IBAction func applyFilter(segmentedControl: UISegmentedControl) {
+    @IBAction func applyFilter(_ segmentedControl: UISegmentedControl) {
     
         guard let filterValue = FilterValueFormat(rawValue: segmentedControl.selectedSegmentIndex) else {
             return
         }
         
         switch filterValue {
-        case .All :
-            self.currentFilter = .All
+        case .all :
+            self.currentFilter = .all
             self.dataSource.predicate = nil
-        case .Favorite :
-            self.currentFilter = .Favorite
+        case .favorite :
+            self.currentFilter = .favorite
             self.dataSource.predicate = NSPredicate(format: "isFavorite == true")
         }
     }
     
-    private enum FilterValueFormat:Int {
-        case All
-        case Favorite
+    fileprivate enum FilterValueFormat:Int {
+        case all
+        case favorite
     }
 }
 

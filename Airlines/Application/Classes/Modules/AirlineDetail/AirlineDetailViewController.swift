@@ -14,11 +14,11 @@ class AirlineDetailViewController: UIViewController {
     
     var viewModel:AirlineDetailViewModel!
     
-    @IBOutlet weak public var logoImageView: UIImageView!
-    @IBOutlet weak public var nameLabel: UILabel!
-    @IBOutlet weak public var phoneLabel: UILabel!
-    @IBOutlet weak public var siteButton: UIButton!
-    @IBOutlet weak public var favoriteSwitch: UISwitch!
+    @IBOutlet weak open var logoImageView: UIImageView!
+    @IBOutlet weak open var nameLabel: UILabel!
+    @IBOutlet weak open var phoneLabel: UILabel!
+    @IBOutlet weak open var siteButton: UIButton!
+    @IBOutlet weak open var favoriteSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,7 +73,7 @@ class AirlineDetailViewController: UIViewController {
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
     }
     
-    @IBAction func updateIsFavorite(localSwitch: UISwitch) {
+    @IBAction func updateIsFavorite(_ localSwitch: UISwitch) {
         guard let airline = viewModel.airline else {
                 return
         }

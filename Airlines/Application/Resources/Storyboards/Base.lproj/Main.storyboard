@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HKo-i7-dJG">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="HKo-i7-dJG">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -36,24 +36,24 @@
                         <viewControllerLayoutGuide type="bottom" id="bqa-6m-Bmn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OBW-si-ySg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fNx-za-7zy">
-                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
+                                <rect key="frame" x="0.0" y="114" width="414" height="622"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ISe-Lm-8YK">
-                                    <size key="itemSize" width="355" height="100"/>
+                                    <size key="itemSize" width="375" height="100"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AirlinesListCollectionViewCell" id="BHp-Ms-NXY" customClass="AirlinesListCollectionViewCell" customModule="Airlines" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="0.0" width="355" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <rect key="frame" x="20" y="0.0" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="355" height="100"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="fWS-q9-L6T">
@@ -63,13 +63,13 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccO-Xw-IPI">
-                                                    <rect key="frame" x="102" y="39.5" width="42" height="21"/>
+                                                    <rect key="frame" x="102" y="39.666666666666664" width="42" height="20.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="favoriteStar.png" translatesAutoresizingMaskIntoConstraints="NO" id="OiZ-uN-RbE">
-                                                    <rect key="frame" x="297" y="25" width="50" height="50"/>
+                                                    <rect key="frame" x="317" y="25" width="50" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="bix-pS-rz9"/>
                                                         <constraint firstAttribute="width" constant="50" id="w1t-k9-RAa"/>
@@ -97,7 +97,7 @@
                                 </cells>
                             </collectionView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Uwo-bx-ZNT">
-                                <rect key="frame" x="47" y="72" width="281" height="29"/>
+                                <rect key="frame" x="66.666666666666686" y="72" width="281" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="3pg-6X-xJk"/>
                                     <constraint firstAttribute="width" constant="281" id="O00-jU-vMK"/>
@@ -107,7 +107,7 @@
                                     <segment title="Favorite"/>
                                 </segments>
                                 <connections>
-                                    <action selector="applyFilterWithSegmentedControl:" destination="WYM-3i-KWf" eventType="valueChanged" id="n6U-E8-VbQ"/>
+                                    <action selector="applyFilter:" destination="WYM-3i-KWf" eventType="valueChanged" id="JFw-y9-iFl"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
@@ -139,7 +139,7 @@
                         <viewControllerLayoutGuide type="bottom" id="fVN-1n-ORz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wXv-gO-MZk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eus-OP-BAo">
@@ -179,7 +179,7 @@
                                 <rect key="frame" x="93" y="318" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="updateIsFavoriteWithLocalSwitch:" destination="6hy-AE-8ar" eventType="valueChanged" id="8F2-ep-DSU"/>
+                                    <action selector="updateIsFavorite:" destination="6hy-AE-8ar" eventType="valueChanged" id="cTb-Fv-T4U"/>
                                 </connections>
                             </switch>
                         </subviews>
